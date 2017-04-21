@@ -58,5 +58,5 @@ make_tiny_dataset <- function(){
     re <- aggregate(measureSet[,-(1:2)], FUN=mean,
               by=list(SubejctID=measureSet$SubejctID, activityLabel=measureSet$LableID))
     
-    write.csv(re,"tidy-data.csv")
+    write.table(re,"tidy-data.txt",row.names=FALSE)
 }
